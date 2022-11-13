@@ -1,2 +1,2 @@
 # backend_study
-# fastcampus
+# fastcampus projects
