@@ -27,12 +27,12 @@ public class Member {
         this.email = Objects.requireNonNull(email);
         this.birthday = Objects.requireNonNull(birthday);
 
-        valdateNickname(nickname);
+        validateNickname(nickname);
         this.nickname = Objects.requireNonNull(nickname);
         this.createdAt = createdAt == null ? LocalDateTime.now() : createdAt;
     }
 
-    void valdateNickname(String nickname) {
+    void validateNickname(String nickname) {
         Assert.isTrue(nickname.length() <= NAME_MAX_LENGTH, "최대 길이를 초과했습니다.");
     }
 }
