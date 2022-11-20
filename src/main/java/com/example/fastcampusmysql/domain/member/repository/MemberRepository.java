@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RequiredArgsConstructor
 @Repository
@@ -29,7 +29,7 @@ public class MemberRepository {
                 .withTableName("Member")
                 .usingGeneratedKeyColumns("id");
         SqlParameterSource params = new BeanPropertySqlParameterSource(member);
-        var id simpleJdbcInsert.executeAndReturnKey(params).longValue();
+        var id = simpleJdbcInsert.executeAndReturnKey(params).longValue();
         return Member
                 .builder()
                 .id(id)
@@ -42,5 +42,6 @@ public class MemberRepository {
 
     private Member update(Member member) {
         // TODO: implemented
+        return member;
     }
 }

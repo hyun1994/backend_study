@@ -10,7 +10,7 @@ import java.util.Objects;
 
 @Getter
 public class Member {
-    final private long id;
+    final private Long id;
 
     private String nickname;
 
